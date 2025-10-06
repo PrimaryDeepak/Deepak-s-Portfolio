@@ -1,0 +1,11 @@
+# Robots.txt for Deepak Kumar's Portfolio
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://primarydeepak.github.io/Deepak-s-Portfolio/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
