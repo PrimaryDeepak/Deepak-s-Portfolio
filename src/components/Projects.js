@@ -82,7 +82,7 @@ const Projects = () => {
                     <h2 className="section-title">{'const projects = ['}</h2>
                     <div className="title-underline"></div>
                     <p className="section-subtitle">
-                        <span className="comment">// Here are some applications I've built</span>
+                        <span className="comment">{`// Here are some applications I've built`}</span>
                     </p>
                 </div>
                 <div className="projects-grid">

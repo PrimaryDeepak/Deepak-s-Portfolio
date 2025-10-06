@@ -13,10 +13,10 @@ const Footer = () => {
             Full Stack Developer passionate about creating amazing web experiences.
           </p>
           <div className="footer-social">
-            <a href="#" className="social-icon">💼</a>
-            <a href="#" className="social-icon">🐱</a>
-            <a href="#" className="social-icon">🐦</a>
-            <a href="#" className="social-icon">📷</a>
+            <a href="https://linkedin.com/in/deepak-kumar" className="social-icon" target="_blank" rel="noopener noreferrer">💼</a>
+            <a href="https://github.com/PrimaryDeepak" className="social-icon" target="_blank" rel="noopener noreferrer">🐱</a>
+            <a href="https://twitter.com/deepak_kumar" className="social-icon" target="_blank" rel="noopener noreferrer">🐦</a>
+            <a href="https://instagram.com/deepak_kumar" className="social-icon" target="_blank" rel="noopener noreferrer">📷</a>
           </div>
         </div>
         
@@ -33,10 +33,10 @@ const Footer = () => {
         <div className="footer-section">
           <h4 className="footer-heading">Services</h4>
           <ul className="footer-links">
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">UI/UX Design</a></li>
-            <li><a href="#">Mobile Apps</a></li>
-            <li><a href="#">Consulting</a></li>
+            <li><span>Web Development</span></li>
+            <li><span>UI/UX Design</span></li>
+            <li><span>Mobile Apps</span></li>
+            <li><span>Consulting</span></li>
           </ul>
         </div>
         

@@ -24,7 +24,7 @@ const Hero = () => {
           </h1>
           <div className="hero-description">
             <div className="code-line">
-              <span className="comment">// Crafting digital experiences with code</span>
+              <span className="comment">{`// Crafting digital experiences with code`}</span>
             </div>
             <div className="code-line">
               <span className="keyword">function</span> <span className="function-name">buildAmazingApps</span> <span className="bracket-start">() {'{'}</span>
