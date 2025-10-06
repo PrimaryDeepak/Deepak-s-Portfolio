@@ -2,10 +2,18 @@
   "name": "deepak-kumar-portfolio",
   "version": "1.0.0",
   "description": "Professional portfolio website showcasing Deepak Kumar's web development skills, projects, and experience. Built with React.js featuring responsive design and modern UI/UX.",
-  "keywords": ["portfolio", "react", "web-development", "javascript", "frontend", "deepak-kumar", "developer"],
+  "keywords": [
+    "portfolio",
+    "react",
+    "web-development",
+    "javascript",
+    "frontend",
+    "deepak-kumar",
+    "developer"
+  ],
   "author": {
     "name": "Deepak Kumar",
-    "email": "deepak@example.com",
+    "email": "deepak250704@gmail.com",
     "url": "https://github.com/PrimaryDeepak"
   },
   "repository": {
@@ -25,11 +33,16 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
