@@ -157,6 +157,10 @@
   transition: color 0.3s ease;
 }
 
+[data-theme="light"] .footer-heading {
+  color: #333;
+}
+
 .footer-heading::after {
   content: '';
   position: absolute;
@@ -281,6 +285,10 @@
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   margin-bottom: 2rem;
   animation: expandDivider 2s ease-out 1s both;
+}
+
+[data-theme="light"] .footer-divider {
+  background: linear-gradient(90deg, transparent, rgba(72, 88, 159, 0.2), transparent);
 }
 
 @keyframes expandDivider {

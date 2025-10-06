@@ -31,7 +31,8 @@ const Skills = () => {
                 <div className="section-header">
                     <h2 className="section-title">{'const skills = {'}</h2>
                     <div className="title-underline"></div>
-                </div>                <div className="skills-grid">
+                </div>
+                <div className="skills-grid">
                     {skillCategories.map((category, categoryIndex) => (
                         <div
                             key={category.title}

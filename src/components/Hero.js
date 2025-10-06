@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import profileImage from '../images/Deepak.jpg';
+import heroImage from '../images/Deepak2.jpg'
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="shape shape-4"></div>
         </div>
       </div>
-      
+
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
@@ -27,12 +27,12 @@ const Hero = () => {
               <span className="comment">// Crafting digital experiences with code</span>
             </div>
             <div className="code-line">
-              <span className="keyword">function</span> <span className="function-name">buildAmazingApps</span>() {'{'}
+              <span className="keyword">function</span> <span className="function-name">buildAmazingApps</span> <span className="bracket-start">() {'{'}</span>
             </div>
             <div className="code-line">
               &nbsp;&nbsp;<span className="keyword">return</span> <span className="string">"Beautiful & Functional UIs"</span>;
             </div>
-            <div className="code-line">
+            <div className="bracket-end">
               {'}'}
             </div>
           </div>
@@ -41,20 +41,20 @@ const Hero = () => {
             <button className="btn btn-secondary">{'git connect'}</button>
           </div>
         </div>
-        
+
         <div className="hero-image">
           <div className="profile-container">
             <div className="profile-image">
-              <img 
-                src={profileImage} 
-                alt="Deepak Kumar Sahu" 
+              <img
+                src={heroImage}
+                alt="Deepak Kumar Sahu"
                 className="profile-photo"
               />
             </div>
           </div>
         </div>
       </div>
-      
+
       <div className="scroll-indicator">
         <div className="scroll-arrow"></div>
       </div>
