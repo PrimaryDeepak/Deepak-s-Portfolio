@@ -128,31 +128,55 @@ The portfolio supports both dark and light themes. You can customize the color s
 
 ## 🚀 Deployment
 
-### GitHub Pages
+### Vercel (Recommended)
+
+#### Method 1: Vercel CLI
+
+1. Install Vercel CLI globally:
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Login to Vercel:
+   ```bash
+   vercel login
+   ```
+
+3. Deploy from your project directory:
+   ```bash
+   vercel
+   ```
+
+4. For production deployment:
+   ```bash
+   vercel --prod
+   ```
+
+#### Method 2: Vercel Dashboard
+
+1. Go to [vercel.com](https://vercel.com) and sign up/login
+2. Click "New Project"
+3. Import your GitHub repository
+4. Configure project settings:
+   - **Framework Preset**: Create React App
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `build`
+   - **Install Command**: `npm install`
+5. Click "Deploy"
+
+**Live URL**: https://deepak-kumar-portfolio.vercel.app
+
+### GitHub Pages (Alternative)
 
 1. Install the GitHub Pages package:
    ```bash
    npm install --save-dev gh-pages
    ```
 
-2. Add deployment scripts to `package.json`:
-   ```json
-   "scripts": {
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build"
-   }
-   ```
-
-3. Deploy to GitHub Pages:
+2. Deploy to GitHub Pages:
    ```bash
    npm run deploy
    ```
-
-### Vercel (Recommended)
-
-1. Connect your GitHub repository to Vercel
-2. Configure build settings (automatic for Create React App)
-3. Deploy with automatic CI/CD
 
 ## 🤝 Contributing
 
