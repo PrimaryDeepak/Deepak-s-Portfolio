@@ -1,7 +1,19 @@
 {
-  "name": "my-portfolio-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "deepak-kumar-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website showcasing Deepak Kumar's web development skills, projects, and experience. Built with React.js featuring responsive design and modern UI/UX.",
+  "keywords": ["portfolio", "react", "web-development", "javascript", "frontend", "deepak-kumar", "developer"],
+  "author": {
+    "name": "Deepak Kumar",
+    "email": "deepak@example.com",
+    "url": "https://github.com/PrimaryDeepak"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PrimaryDeepak/Deepak-s-Portfolio.git"
+  },
+  "homepage": "https://primarydeepak.github.io/Deepak-s-Portfolio",
+  "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

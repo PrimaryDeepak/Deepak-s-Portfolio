@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Deepak Portfolio",
+  "name": "Deepak Kumar - Full Stack Developer Portfolio",
+  "description": "Professional portfolio showcasing web development projects, skills, and experience",
   "icons": [
     {
       "src": "favicon.ico",
