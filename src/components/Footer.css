@@ -188,6 +188,15 @@
   margin: 0;
 }
 
+.footer-services {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] .footer-services {
+  color: #555;
+}
+
 .footer-links li {
   margin-bottom: 0.8rem;
   animation: fadeInLeft 1s ease-out;

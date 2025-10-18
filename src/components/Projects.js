@@ -96,7 +96,7 @@ const Projects = () => {
                                 <span className="project-emoji">{project.image}</span>
                                 <div className="project-overlay">
                                     <div className="project-links">
-                                        <a href={project.liveUrl} className="project-link">
+                                        <a href={project.liveUrl} target='_blank' rel="noreferrer" className="project-link">
                                             <span>�</span> Deploy
                                         </a>
                                     </div>

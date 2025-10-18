@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,6 +11,7 @@ const Contact = () => {
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState('');
 
     const handleChange = (e) => {
         setFormData({
@@ -18,21 +20,51 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setSubmitStatus('');
 
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
-            alert('Message sent successfully!');
+        try {
+            // EmailJS configuration - replace with your actual values
+            const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_96f06hj';
+            const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_l6xiy1k';
+            const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'wM9VRowDZ9HPGiRW7';
+
+            const templateParams = {
+                name: formData.name,
+                from_email: formData.email,
+                email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+                to_name: 'Deepak Kumar Sahu', // Your name
+            };
+
+            const result = await emailjs.send(
+                serviceId,
+                templateId,
+                templateParams,
+                publicKey
+            );
+
+            setSubmitStatus('success');
+            alert('Message sent successfully! I\'ll get back to you soon.');
+            
+            // Reset form
             setFormData({
                 name: '',
                 email: '',
                 subject: '',
                 message: ''
             });
-        }, 2000);
+
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            setSubmitStatus('error');
+            alert('Failed to send message. Please try again or contact me directly via email.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (

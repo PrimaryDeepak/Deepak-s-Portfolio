@@ -33,10 +33,10 @@ const Footer = () => {
         <div className="footer-section">
           <h4 className="footer-heading">Services</h4>
           <ul className="footer-links">
-            <li><span>Web Development</span></li>
-            <li><span>UI/UX Design</span></li>
-            <li><span>Mobile Apps</span></li>
-            <li><span>Consulting</span></li>
+            <li><span className='footer-services'>Web Development</span></li>
+            <li><span className='footer-services'>UI/UX Design</span></li>
+            <li><span className='footer-services'>Mobile Apps</span></li>
+            <li><span className='footer-services'>Consulting</span></li>
           </ul>
         </div>
         
