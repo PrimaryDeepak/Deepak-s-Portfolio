@@ -11,7 +11,6 @@ const Contact = () => {
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState('');
 
     const handleChange = (e) => {
         setFormData({
@@ -23,7 +22,6 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        setSubmitStatus('');
 
         try {
             // EmailJS configuration from environment variables
@@ -45,14 +43,13 @@ const Contact = () => {
                 to_name: 'Deepak Kumar Sahu', // Your name
             };
 
-            const result = await emailjs.send(
+            await emailjs.send(
                 serviceId,
                 templateId,
                 templateParams,
                 publicKey
             );
 
-            setSubmitStatus('success');
             alert('Message sent successfully! I\'ll get back to you soon.');
             
             // Reset form
@@ -65,7 +62,6 @@ const Contact = () => {
 
         } catch (error) {
             console.error('Email sending failed:', error);
-            setSubmitStatus('error');
             alert('Failed to send message. Please try again or contact me directly via email.');
         } finally {
             setIsSubmitting(false);
