@@ -26,10 +26,15 @@ const Contact = () => {
         setSubmitStatus('');
 
         try {
-            // EmailJS configuration - replace with your actual values
-            const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_96f06hj';
-            const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_l6xiy1k';
-            const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'wM9VRowDZ9HPGiRW7';
+            // EmailJS configuration from environment variables
+            const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+            const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+            const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+            // Check if all required environment variables are set
+            if (!serviceId || !templateId || !publicKey) {
+                throw new Error('EmailJS configuration missing. Please check environment variables.');
+            }
 
             const templateParams = {
                 name: formData.name,
