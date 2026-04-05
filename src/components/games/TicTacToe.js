@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './TicTacToe.css';
 
 const TicTacToe = () => {
@@ -38,7 +38,6 @@ const TicTacToe = () => {
 
     // Simple AI: try to win, then block, then random
     const newBoard = [...currentBoard];
-    let moved = false;
 
     // Try to win
     for (let i = 0; i < 9; i++) {

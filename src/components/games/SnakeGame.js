@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './SnakeGame.css';
 
 const SnakeGame = () => {
@@ -13,20 +13,16 @@ const SnakeGame = () => {
   const gameLoopRef = useRef(null);
 
   const generateFood = (currentSnake = snake) => {
-    let newFood;
-    let isOnSnake = true;
+    // eslint-disable-next-line no-loop-func
+    const isPositionOccupied = (x, y) => currentSnake.some(segment => segment.x === x && segment.y === y);
     
-    while (isOnSnake) {
-      newFood = {
-        x: Math.floor(Math.random() * gridSize),
-        y: Math.floor(Math.random() * gridSize)
-      };
-      
-      // Check if food position overlaps with snake
-      isOnSnake = currentSnake.some(segment => segment.x === newFood.x && segment.y === newFood.y);
-    }
+    let x, y;
+    do {
+      x = Math.floor(Math.random() * gridSize);
+      y = Math.floor(Math.random() * gridSize);
+    } while (isPositionOccupied(x, y));
     
-    return newFood;
+    return { x, y };
   };
 
   useEffect(() => {
@@ -97,6 +93,7 @@ const SnakeGame = () => {
     }, 200);
 
     return () => clearInterval(gameLoopRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameStarted, gameOver, nextDirection, food]);
 
   const startGame = () => {
