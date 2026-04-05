@@ -1,0 +1,143 @@
+.memory-game {
+  text-align: center;
+}
+
+.memory-game h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 25px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.stat span {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.stat strong {
+  font-size: 1.8rem;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+.winner-message {
+  padding: 20px 30px;
+  background: linear-gradient(135deg, var(--accent-green), var(--accent-purple));
+  color: white;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 12px;
+  margin: 30px auto;
+  max-width: 500px;
+  padding: 20px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+}
+
+.memory-card {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  font-size: 2.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.memory-card:not(:disabled):hover {
+  transform: scale(1.05) rotateY(10deg);
+  box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4);
+}
+
+.memory-card.flipped {
+  background: var(--bg-secondary);
+  border-color: var(--accent-green);
+}
+
+.memory-card:disabled {
+  cursor: not-allowed;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.memory-game .btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.memory-game .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(88, 166, 255, 0.3);
+}
+
+@media (max-width: 600px) {
+  .memory-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .memory-card {
+    font-size: 2rem;
+  }
+
+  .stats {
+    gap: 30px;
+  }
+}
