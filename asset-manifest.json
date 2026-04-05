@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8c9fa7f6.css",
-    "main.js": "/static/js/main.e1a4873a.js",
+    "main.css": "/static/css/main.eb184659.css",
+    "main.js": "/static/js/main.d6c27a4f.js",
     "static/js/453.5648ccba.chunk.js": "/static/js/453.5648ccba.chunk.js",
     "static/media/Deepak2.jpg": "/static/media/Deepak2.f437b7b0737755a61e92.jpg",
     "index.html": "/index.html",
-    "main.8c9fa7f6.css.map": "/static/css/main.8c9fa7f6.css.map",
-    "main.e1a4873a.js.map": "/static/js/main.e1a4873a.js.map",
+    "main.eb184659.css.map": "/static/css/main.eb184659.css.map",
+    "main.d6c27a4f.js.map": "/static/js/main.d6c27a4f.js.map",
     "453.5648ccba.chunk.js.map": "/static/js/453.5648ccba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c9fa7f6.css",
-    "static/js/main.e1a4873a.js"
+    "static/css/main.eb184659.css",
+    "static/js/main.d6c27a4f.js"
   ]
 }
